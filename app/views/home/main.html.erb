@@ -1,0 +1,32 @@
+<div id="main">
+  <div class="well">
+    Welcome back, <%=@current_user.first_name%>!!
+  </div>
+
+  <div class="well">
+    <h2>Would you like to review these books?</h2>
+
+    <div id="books" class="container-fluid">
+      <% @books.each do |row| %>
+        <div class="row">
+        <% row.each do |book| %>
+          <div class="col-lg-4">
+            <a href="<%=new_book_review_path(book)%>"><img src="<%=book.url%>"></a>
+            <ul class="list-unstyled">
+              <li><h4><span class="label label-default"><%=book.title%></span></h4></li>
+              <li><h4><span class="label label-default"><%=book.author%></span></h4></li>
+              <li>
+                <h4>
+                  <span class="label label-success">
+                    <i class="fa fa-pencil"></i> <%=book.reviews.length%> <%='review'.pluralize(book.reviews.length)%>
+                  </span>
+                </h4>
+              </li>
+            </ul>
+          </div>
+        <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div> 
