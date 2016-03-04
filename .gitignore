@@ -1,10 +1,6 @@
-# Ignore bundler config.
-/.bundle
-
-# Ignore all logfiles and tempfiles.
-/log/*
+# Ignore all logfiles
+/log/*.log
 !/log/.keep
-/tmp
 
 *.gem
 *.rbc
