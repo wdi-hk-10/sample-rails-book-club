@@ -1,6 +1,7 @@
 <div id="main">
   <div class="well">
-    Welcome back, <%=@current_user.first_name%>!!
+    Welcome back, <%=@current_user.first_name%>!!<br/>
+    <a href="<%=user_reviews_path(@current_user)%>">Click here</a> to read your own reviews.
   </div>
 
   <div class="well">

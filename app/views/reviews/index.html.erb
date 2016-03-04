@@ -1,0 +1,28 @@
+<div class="well">
+  <%=@user.full_name%>'s Reviews
+</div>
+
+<div class="well">
+  <table class="table table-striped">
+    <thead>
+      <th>Book Title</th>
+      <th>Author</th>
+      <th>Review</th>
+      <th>Last Update</th>
+    </thead>
+    <tbody>
+      <% @reviews.each do |review| %>
+        <tr>
+          <td><%=review.book.title%></td>
+          <td><%=review.book.author%></td>
+          <td><%=review.content%></td>
+          <td><%=review.updated_at.strftime("%F %T")%></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<div class="well">
+  <%= link_to 'Back', main_path %>
+</div>

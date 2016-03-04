@@ -3,6 +3,10 @@ Rails.application.routes.draw do
     resources :reviews, only: [:new, :create]
   end
 
+  resources :users do
+    resources :reviews, only: [:index]
+  end
+
   post 'signin' => 'users#signin'
   get  'main' => 'home#main'
 
