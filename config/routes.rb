@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :books do
-    resources :reviews
+    resources :reviews, only: [:new, :create]
   end
 
   post 'signin' => 'users#signin'

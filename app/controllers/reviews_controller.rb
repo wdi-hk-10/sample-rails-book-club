@@ -6,8 +6,10 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    #@book.reviews.create(content: review_params[:content])
-    @book.reviews.create(review_params)
+    #review = @book.reviews.new(content: review_params[:content])
+    review = @book.reviews.new(review_params)
+    review.user = @current_user
+    review.save
 
     redirect_to main_path
   end

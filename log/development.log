@@ -7715,3 +7715,177 @@ Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde45
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-04 13:45:38 +0800
+  [1m[36mReview Load (1.3ms)[0m  [1mSELECT  "reviews".* FROM "reviews"  ORDER BY "reviews"."id" ASC LIMIT 1[0m
+
+
+Started GET "/books/4/reviews/new" for ::1 at 2016-03-04 14:09:10 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ReviewsController#new as HTML
+  Parameters: {"book_id"=>"4"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mBook Load (0.7ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered reviews/_form.html.erb (23.3ms)
+  Rendered reviews/new.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 341ms (Views: 294.4ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-e06681399ce72e3ecd80ea52c90a2a6239fb8020989dc01f9755dedb436f5996.css?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/bootstrap_and_overrides.self-9b692ec76c0436a8d02d247efcf622b2af16f8f942bbba5a688b9339c463b1dd.css?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/reviews.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/home.self-1b67895afb1f8c8a977c180b92ce86b188717b70b6faeaee2483c5e63cc11570.css?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/font-awesome.self-c1a7a80b6536c3397a1a212c9bd22298ae69260ee343d00b60d7f41fa54a59a8.css?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/reviews.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-04 14:09:11 +0800
+
+
+Started POST "/books/4/reviews" for ::1 at 2016-03-04 14:09:17 +0800
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QVqV2El5tw0Ot9jALHFi6RT2573ZFLzYUQFnmlSRYaL8eq3uTic2/MAjaVVmFeipIbc1hRGC9RPhypS/qoSOXw==", "review"=>{"content"=>"Good one!!"}, "commit"=>"Create Review", "book_id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "reviews" ("content", "book_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "Good one!!"], ["book_id", 4], ["created_at", "2016-03-04 06:09:17.387687"], ["updated_at", "2016-03-04 06:09:17.387687"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/main
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/main" for ::1 at 2016-03-04 14:09:17 +0800
+Processing by HomeController#main as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  [1m[36mReview Load (0.2ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1[0m  [["book_id", 1]]
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1  [["book_id", 2]]
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1[0m  [["book_id", 3]]
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1  [["book_id", 5]]
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1[0m  [["book_id", 4]]
+  Rendered home/main.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 1.1ms)
+  [1m[35mReview Load (0.6ms)[0m  SELECT  "reviews".* FROM "reviews"  ORDER BY "reviews"."id" DESC LIMIT 1
+
+
+Started GET "/books/5/reviews/new" for ::1 at 2016-03-04 14:10:06 +0800
+Processing by ReviewsController#new as HTML
+  Parameters: {"book_id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered reviews/_form.html.erb (1.7ms)
+  Rendered reviews/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 86ms (Views: 63.4ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/books/5/reviews" for ::1 at 2016-03-04 14:10:16 +0800
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t9K4Ces5tSSqBu2ECC2zTDA+fN1Is4x4Yecr+k+BFcIK8oA/7Gc01WSSXBFCSTkMBX+u5YAlxbPRLNjfsZT6Pw==", "review"=>{"content"=>"the book is better than the movie!"}, "commit"=>"Create Review", "book_id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reviews" ("content", "book_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "the book is better than the movie!"], ["book_id", 5], ["user_id", 1], ["created_at", "2016-03-04 06:10:16.348543"], ["updated_at", "2016-03-04 06:10:16.348543"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/main
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/main" for ::1 at 2016-03-04 14:10:16 +0800
+Processing by HomeController#main as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  [1m[36mReview Load (0.2ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1[0m  [["book_id", 1]]
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1  [["book_id", 2]]
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1[0m  [["book_id", 3]]
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1  [["book_id", 5]]
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1[0m  [["book_id", 4]]
+  Rendered home/main.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 67ms (Views: 65.1ms | ActiveRecord: 1.0ms)
+  [1m[36mReview Load (0.4ms)[0m  [1mSELECT  "reviews".* FROM "reviews"  ORDER BY "reviews"."id" DESC LIMIT 1[0m
+
+
+Started GET "/books/2/reviews/new" for ::1 at 2016-03-04 14:12:12 +0800
+Processing by ReviewsController#new as HTML
+  Parameters: {"book_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered reviews/_form.html.erb (1.2ms)
+  Rendered reviews/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 70ms (Views: 68.3ms | ActiveRecord: 0.3ms)
