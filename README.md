@@ -42,6 +42,7 @@ The steps are quite simple. Check out [the github page](https://github.com/bokma
      ```css
       *= require font-awesome
      ```
+
 ### How to integrate the momentjs-rails gem?
 
 You should start seeing the pattern by now. This is the gem's [github page](https://github.com/derekprior/momentjs-rails) if you want to take a look.
