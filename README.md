@@ -39,7 +39,7 @@ The steps are quite simple. Check out [the github page](https://github.com/bokma
   1. Add `gem "font-awesome-rails"` in your `Gemfile`.
   1. Run `bundle install`.
   1. Add the following line to your `application.css`. Refer to the sample code if you are not sure where you should add this line.
-     ```css
+     ```
       *= require font-awesome
      ```
 
