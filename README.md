@@ -8,7 +8,7 @@ Please make these changes to your Rails project **BEFORE** you made any code cha
 
 ### How to use SCSS file?
 
-You can just treat them as a regular css file. You can change your Sublime setting at the lower right corner to view the `.scss` files as CSS. Then you can enjoy the CSS syntax highlighting.
+You can just treat them as regular css files. You can change your Sublime setting at the lower right corner to view the `.scss` files as `CSS`. Then you can enjoy the CSS syntax highlighting.
 
 ### Disable CoffeeScript
 
@@ -17,7 +17,7 @@ Do the following:
   1. Run `bundle install`.
   1. If there are `.coffee` files already generated in your `app/assets/javascripts` folder, you can simply rename them to `.js`.
 
-After you have made these changes, `rails g controller` will generate `.js` file for each controller you create.
+After you have made these changes, `rails g controller` will generate `.js` files instead of the default `.coffee` for each controller you create.
 
 ### How to integrate the twitter-bootstrap-rails gem?
 
@@ -75,6 +75,21 @@ class ApplicationController < ActionController::Base
   end
 end
 ```
+
+### How to use jQuery?
+
+In the sample code, if you need to use jQuery in any of the view pages generated for the `HomeController` under the `app/views/home/` folder, you should write the jQuery code in `home.js`.
+
+Likewise, for the views pages generated for the `ReviewsController` under the `app/views/reviews/` folder, you should write the jQuery code in `reviews.js`.
+
+You can refer to these files in the sample:
+```
+   app/views/home/main.html.erb
+   app/assets/javascripts/home.js
+   app/views/reviews/index.html.erb
+   app/assets/javascripts/reviews.js
+```
+
 
 ### Still doesn't work?
 
