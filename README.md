@@ -53,6 +53,7 @@ You should start seeing the pattern by now. This is the gem's [github page](http
      ```javascript
      //= require moment
      ```
+
 ### Update ApplicationController to disable authentication
 
 In the `app/controllers/application_controller.rb` file, you can do this to ensure that the **FIRST** user from your `users` table is **always** the current user.
