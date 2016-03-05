@@ -47,7 +47,7 @@ The steps are quite simple. Check out [the github page](https://github.com/bokma
 
 You should start seeing the pattern by now. This is the gem's [github page](https://github.com/derekprior/momentjs-rails) if you want to take a look.
 
-  1. Add `gem "momentjs-rals"` in your `Gemfile`.
+  1. Add `gem "momentjs-rails"` in your `Gemfile`.
   1. Run `bundle install`.
   1. Add the following line to your `application.js`. Refer to the same code if you are not sure where you should add this line.
      ```javascript
