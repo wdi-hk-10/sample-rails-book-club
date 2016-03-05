@@ -77,6 +77,11 @@ class ApplicationController < ActionController::Base
 end
 ```
 
+You can use `@current_user` in **ANY** `html.erb` page, for example:
+```
+Welcome back, <%=@current_user.first_name%>!!<br/>
+```
+
 ### How to use jQuery?
 
 In the sample code, if you need to use jQuery in any of the view pages generated for the `HomeController` under the `app/views/home/` folder, you should write the jQuery code in `home.js`.
