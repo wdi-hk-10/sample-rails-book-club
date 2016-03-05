@@ -6,7 +6,7 @@ This is a partial Rails application that has limited features. But use it as a r
 
 Please make these changes to your Rails project **BEFORE** you made any code change. Make sure you **RESTART** your Rails server after making these changes.
 
-### How to use SCSS file?
+### How to use SCSS files?
 
 You can just treat them as regular css files. You can change your Sublime setting at the lower right corner to view the `.scss` files as `CSS`. Then you can enjoy the CSS syntax highlighting.
 
