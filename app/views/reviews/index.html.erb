@@ -9,6 +9,8 @@
       <th>Book Title</th>
       <th>Author</th>
       <th>Review</th>
+      <th></th>
+      <th></th>
       <th>Last Update</th>
     </thead>
     <tbody>
@@ -17,6 +19,12 @@
           <td><%=review.book.title%></td>
           <td><%=review.book.author%></td>
           <td><%=review.content%></td>
+          <td><a href="<%=edit_book_review_path review.book, review %>"><i class="fa fa-pencil-square-o"></i></a></td>
+          <td>
+            <%= link_to review_path(review), method: :delete, data: { confirm: 'Are you sure?' } do %>
+              <i class="fa fa-times"></i>
+            <% end %>
+          </td>
           <td><%=review.updated_at.strftime("%F %T")%></td>
         </tr>
       <% end %>
@@ -25,5 +33,5 @@
 </div>
 
 <div class="well">
-  <%= link_to 'Back', main_path %>
+  <%= link_to 'Back to the Main Page', main_path %>
 </div>

@@ -1,0 +1,11 @@
+<div class="well">
+  Edit a review for <%=@book.title%>!!
+</div>
+
+<div class="well">
+  <%= render 'form' %>
+</div>  
+
+<div class="well">
+  <%= link_to 'Back to my reviews', user_reviews_path(@current_user) %>
+</div>

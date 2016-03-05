@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   resources :books do
-    resources :reviews, only: [:new, :create]
+    resources :reviews, only: [:new, :create, :edit, :update]
   end
 
   resources :users do
     resources :reviews, only: [:index]
   end
+
+  resources :reviews, only: [:destroy]
 
   post 'signin' => 'users#signin'
   get  'main' => 'home#main'
