@@ -50,7 +50,7 @@ You should start seeing the pattern by now. This is the gem's [github page](http
   1. Add `gem "momentjs-rails"` in your `Gemfile`.
   1. Run `bundle install`.
   1. Add the following line to your `application.js`. Refer to the same code if you are not sure where you should add this line.
-     ```javascript
+     ```
      //= require moment
      ```
 
