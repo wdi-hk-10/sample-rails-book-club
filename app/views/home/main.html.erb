@@ -6,7 +6,7 @@
   </div>
 
   <div class="well">
-    <h2>Would you like to review these books?</h2>
+    <h2>Would you like to review these books? Or <a href="<%=new_book_path%>">ADD</a> a new book?</h2>
 
     <div id="books" class="container-fluid">
       <% @books.each do |row| %>
@@ -20,7 +20,16 @@
               <li>
                 <h4>
                   <span class="label label-success">
-                    <i class="fa fa-pencil"></i> <%=book.reviews.length%> <%='review'.pluralize(book.reviews.length)%>
+                    <i class="fa fa-file-text-o"></i> <%=book.reviews.length%> <%='review'.pluralize(book.reviews.length)%>
+                  </span>
+                </h4>
+              </li>
+              <li>
+                <h4>
+                  <span class="label label-warning">
+                    <a href="<%=edit_book_path(book)%>">
+                      <i class="fa fa-pencil"></i> Edit this book 
+                    </a>
                   </span>
                 </h4>
               </li>

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     resources :reviews, only: [:new, :create, :edit, :update]
   end
 
-  resources :users do
+  resources :users, only: [] do
     resources :reviews, only: [:index]
   end
 
