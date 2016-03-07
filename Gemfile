@@ -46,3 +46,5 @@ end
 gem "twitter-bootstrap-rails"
 gem "font-awesome-rails"
 gem 'momentjs-rails'
+
+gem 'paperclip', '~> 4.3'

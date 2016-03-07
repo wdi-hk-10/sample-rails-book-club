@@ -13,7 +13,9 @@
         <div class="row">
         <% row.each do |book| %>
           <div class="col-lg-4">
-            <a href="<%=new_book_review_path(book)%>"><img src="<%=book.url%>"></a>
+            <a href="<%=new_book_review_path(book)%>">
+              <img class="thumbnail" src="<%=book.url.empty? ? book.image.url(:medium) : book.url %>">
+            </a>
             <ul class="list-unstyled">
               <li><h4><span class="label label-default"><%=book.title%></span></h4></li>
               <li><h4><span class="label label-default"><%=book.author%></span></h4></li>
