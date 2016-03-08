@@ -105,4 +105,114 @@ Compare these key files to the sample code and see if there are any differences:
   - `app/assets/stylesheets/bootstrap_and_overrides.css`
   - `app/controllers/application_controller.rb`
 
+## Paperclip gem integration
+
+#### 0. Install ImageMagick
+
+Make sure you have [ImageMagick](http://www.imagemagick.org/script/index.php) installed. ImageMagick is a library that allow us to resize images in the server and do different kinds of image processing (black&white, transparencies, etc)
+
+```bash
+$ brew install imagemagick
+```
+
+#### 1. Add `paperclip` gem
+
+Open `Gemfile` and add this line at the end.
+
+```
+gem 'paperclip', '~> 4.3'
+```
+
+Then run `bundle install`.
+
+#### 2. Create migration files
+
+Next we need to create a migration to add an `image` attribute to the `Book` model. First we need to generate the migration file:
+
+`$ rails g migration add_image_to_books`
+
+Then we should update the migration file and add one line in the `change` method:
+
+```ruby
+class AddImageToBooks < ActiveRecord::Migration
+  def change
+    add_attachment :books, :image
+  end
+end
+```
+
+And now we can do `rake db:migrate`.
+
+#### 3. Configure Paperclip in `Book` model
+
+In `app/models/book.rb`, add the following the lines of code underneath `### New Code ###`:
+
+```ruby
+class Book < ActiveRecord::Base
+  has_many :reviews
+  has_many :users, through: :reviews
+
+  ### New Code ###
+
+  has_attached_file :image, styles: {
+    medium: "300x300>",
+    thumb: "100x100>"
+  }
+
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+end
+```
+
+#### 4. Allow `image` param in `Books` controller
+
+In the `BooksController`, we need to add `:image` as a whitelisted parameter inside the `book_params` method.
+
+```ruby
+class BooksController < ApplicationController
+  #
+  # Code now shown
+  #
+
+  private
+
+  def book_params
+    params.require(:book).permit(:title, :url, :author, :isbn, :image)
+  end
+end
+```
+
+#### 5. Add image form field in views
+
+In `app/views/books/_form.html.erb`, update the `form_for` helper like this:
+
+```erb
+<%= form_for @book, html: { multipart: true} do |f| %>
+```
+
+And then, add a new field to the form:
+
+
+```erb
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
+```
+
+Finally, in `app/views/home/main.html.erb`, change the code that display the book image with these
+
+```erb
+  <a href="<%=new_book_review_path(book)%>">
+    <img class="thumbnail" src="<%=book.url.empty? ? burl(:medium) : book.url %>">
+  </a>
+```
+
+#### 6. Restart Rails Server
+
+Before we test the image uploading, please make sure you have restarted your Rails server. 
+
+Have fun!!
+
+
+
 
