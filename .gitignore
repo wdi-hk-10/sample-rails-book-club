@@ -5,6 +5,9 @@
 # Ignore public/system folder from paperclip
 /public/system
 
+# AWS
+.env
+
 *.gem
 *.rbc
 /.config
