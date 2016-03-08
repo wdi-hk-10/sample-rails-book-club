@@ -2,6 +2,9 @@
 /log/*.log
 !/log/.keep
 
+# Ignore public/system folder from paperclip
+/public/system
+
 *.gem
 *.rbc
 /.config
