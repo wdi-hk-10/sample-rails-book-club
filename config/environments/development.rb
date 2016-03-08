@@ -39,7 +39,7 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
-  # AWS S3 Bucker Configuration for Paperclip
+  # AWS S3 Bucket Configuration for Paperclip
   config.paperclip_defaults = {
     :storage => :s3,
     :url =>':s3_domain_url',

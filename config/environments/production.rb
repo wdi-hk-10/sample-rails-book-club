@@ -77,7 +77,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  # AWS S3 Bucker Configuration for Paperclip
+  # AWS S3 Bucket Configuration for Paperclip
   config.paperclip_defaults = {
     :storage => :s3,
     :url =>':s3_domain_url',
